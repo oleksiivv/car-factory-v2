@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.carfactory.controller.CarPlantController"
+      alignment="CENTER">
+
+    <Label fx:id="carProducersCount" />
+    <ImageView fitWidth="200.0" preserveRatio="true">
+        <VBox.margin>
+            <Insets>
+                <top>20</top>
+                <bottom>10</bottom>
+            </Insets>
+        </VBox.margin>
+
+        <Image url="@/assets/images/car-factory.png" />
+    </ImageView>
+    <Label fx:id="waitingCarCreationTasksCount" text="Number of orders in queue: " />
+</VBox>

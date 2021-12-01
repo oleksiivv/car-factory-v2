@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.carfactory.controller.CarDealersController"
+      alignment="TOP_CENTER">
+
+    <Label fx:id="carDealersCount" />
+    <Slider fx:id="carRequestingRate" value="5.0" blockIncrement="0.50" majorTickUnit="1.0" minorTickCount="1"
+            min="1.0" max="10.0" showTickLabels="true" showTickMarks="true" />
+    <Label text="Requesting rate, s" />
+    <ImageView fitWidth="150.0" preserveRatio="true">
+        <VBox.margin>
+            <Insets>
+                <top>20</top>
+                <bottom>10</bottom>
+            </Insets>
+        </VBox.margin>
+
+        <Image url="@/assets/images/car-dealer.png" />
+    </ImageView>
+</VBox>

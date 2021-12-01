@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<GridPane xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml"
+          fx:controller="org.carfactory.controller.CarComponentProducersController"
+          vgap="20">
+
+    <rowConstraints>
+        <RowConstraints percentHeight="100" />
+    </rowConstraints>
+
+    <columnConstraints>
+        <ColumnConstraints percentWidth="33" />
+        <ColumnConstraints percentWidth="33" />
+        <ColumnConstraints percentWidth="33" />
+    </columnConstraints>
+
+    <VBox GridPane.columnIndex="0" alignment="CENTER">
+        <Label fx:id="carEngineProducersCount" />
+        <VBox alignment="CENTER">
+            <Slider fx:id="carEngineProducingRate" value="3.0" blockIncrement="0.25" majorTickUnit="1.0"
+                    min="1.0" max="5.0" showTickLabels="true" showTickMarks="true" />
+            <Label text="Supplying rate, s" />
+        </VBox>
+
+        <ImageView fitWidth="150.0" preserveRatio="true">
+            <VBox.margin>
+                <Insets>
+                    <top>20</top>
+                    <bottom>10</bottom>
+                </Insets>
+            </VBox.margin>
+            <Image url="@/assets/images/storage.png" />
+        </ImageView>
+
+        <VBox alignment="CENTER">
+            <Label fx:id="carEngineWarehouseState" />
+            <Label fx:id="carEngineWarehouseTotal" text="Total delivered: " />
+        </VBox>
+    </VBox>
+    <VBox GridPane.columnIndex="1" alignment="CENTER">
+        <Label fx:id="carBodyProducersCount" />
+        <Slider fx:id="carBodyProducingRate" value="3.0" blockIncrement="0.25" majorTickUnit="1.0"
+                min="1.0" max="5.0" showTickLabels="true" showTickMarks="true" />
+        <Label text="Supplying rate, s" />
+
+        <ImageView fitWidth="150.0" preserveRatio="true">
+            <VBox.margin>
+                <Insets>
+                    <top>20</top>
+                    <bottom>10</bottom>
+                </Insets>
+            </VBox.margin>
+
+            <Image url="@/assets/images/storage.png" />
+        </ImageView>
+        <Label fx:id="carBodyWarehouseState" />
+        <Label fx:id="carBodyWarehouseTotal" text="Total delivered: " />
+    </VBox>
+    <VBox GridPane.columnIndex="2" alignment="CENTER">
+        <Label fx:id="carAccessoryProducersCount" />
+        <Slider fx:id="carAccessoryProducingRate" value="3.0" blockIncrement="0.25" majorTickUnit="1.0"
+                min="1.0" max="5.0" showTickLabels="true" showTickMarks="true" />
+        <Label text="Supplying rate, s" />
+
+        <ImageView fitWidth="150.0" preserveRatio="true">
+            <VBox.margin>
+                <Insets>
+                    <top>20</top>
+                    <bottom>10</bottom>
+                </Insets>
+            </VBox.margin>
+
+            <Image url="@/assets/images/storage.png" />
+        </ImageView>
+        <Label fx:id="carAccessoryWarehouseState" />
+        <Label fx:id="carAccessoryWarehouseTotal" text="Total delivered: " />
+    </VBox>
+</GridPane>
